@@ -2,31 +2,25 @@
 
 @section('content')
   <!-- Hero -->
-  <header class="masthead text-center text-white " id="home">
+  <header class="masthead text-center text-white" id="home">
     <div id="carouselExample" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://source.unsplash.com/800x300?code" class="img-fluid w-100" alt="...">
+          <img src="https://source.unsplash.com/800x325?white" class="img-fluid w-100" alt="first-slider-img">
           <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://source.unsplash.com/800x300?code" class="d-block w-100" alt="...">
+          <img src="https://source.unsplash.com/800x326?white" class="d-block w-100" alt="second-slider-img">
           <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://source.unsplash.com/800x300?code" class="d-block w-100" alt="...">
+          <img src="https://source.unsplash.com/800x327?white" class="d-block w-100" alt="third-slider-img">
           <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>
@@ -74,7 +68,7 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+            <img class="img-fluid" src="{{ asset('front/img/portfolio/cabin.png') }}" alt="news-img-1" />
           </div>
         </div>
         <!-- Portfolio Item 2-->
@@ -83,7 +77,7 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
+            <img class="img-fluid" src="{{ asset('front/img/portfolio/cake.png') }}" alt="news-img-2" />
           </div>
         </div>
         <!-- Portfolio Item 3-->
@@ -92,34 +86,7 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
-          </div>
-        </div>
-        <!-- Portfolio Item 4-->
-        <div class="col-md-6 col-lg-4 mb-lg-0 mb-5">
-          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
-          </div>
-        </div>
-        <!-- Portfolio Item 5-->
-        <div class="col-md-6 col-lg-4 mb-md-0 mb-5">
-          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
-          </div>
-        </div>
-        <!-- Portfolio Item 6-->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
+            <img class="img-fluid" src="{{ asset('front/img/portfolio/circus.png') }}" alt="news-img-3" />
           </div>
         </div>
       </div>
