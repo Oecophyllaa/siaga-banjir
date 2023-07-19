@@ -35,7 +35,7 @@
                 <div class="font-weight-bold text-primary text-uppercase mb-1 text-xs">
                   Water Level (cm)
                 </div>
-                <div class="h5 font-weight-bold mb-0 text-gray-800">3.20</div>
+                <div class="h5 font-weight-bold mb-0 text-gray-800" id="water-level">3.20</div>
               </div>
               <div class="col-auto">
                 <i class="fas fa-ruler-vertical fa-2x text-gray-300"></i>
@@ -155,7 +155,7 @@
       // Once a connection has been made, make a subscription and send a message.
       console.log("onConnect");
 
-      client.subscribe("mqtt/test");
+      client.subscribe("mqtt/water-level");
 
       message = new Paho.Message("OK");
       message.destinationName = "mqtt/web";
@@ -173,6 +173,11 @@
     function onMessageArrived(message) {
       if (message.destinationName == "mqtt/test") {
         document.getElementById("status").innerHTML = message.payloadString;
+        // console.log("onMessageArrived:" + message.payloadString);
+      }
+
+      if (message.destinationName == "mqtt/water-level") {
+        document.getElementById("water-level").innerHTML = Math.round(message.payloadString);
         // console.log("onMessageArrived:" + message.payloadString);
       }
     }
