@@ -12,7 +12,7 @@
         <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-0" href="#home">Beranda</a></li>
         <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-0" href="#maps">Maps</a></li>
         <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-0" href="#about">About</a></li>
-        <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-0" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-0" href="#news">Berita</a></li>
         <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-0" href="#contact">Contact</a></li>
       </ul>
     </div>
