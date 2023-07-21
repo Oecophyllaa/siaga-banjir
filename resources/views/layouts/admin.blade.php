@@ -1,90 +1,48 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!--<![endif]-->
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Siaga Banjir</title>
+  <meta name="description" content="Ela Admin - HTML5 Admin Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSRF Token -->
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-
-  <title>{{ config('app.name', 'Laravel') }}</title>
-
-  <!-- Style -->
+  <!-- Styles -->
   @stack('before-style')
   @include('admin.partials.style')
   @stack('after-style')
 </head>
 
-<body id="page-top">
-  <!-- Page Wrapper -->
-  <div id="wrapper">
+<body>
+  <!-- Left Panel -->
+  @include('admin.partials.sidebar')
+  <!-- /#left-panel -->
 
-    <!-- Sidebar -->
-    @include('admin.partials.sidebar')
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-      <!-- Main Content -->
-      <div id="content">
-
-        <!-- Navbar -->
-        @include('admin.partials.navbar')
-
-        <!-- Content -->
-        @yield('content')
-
-      </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-      @include('admin.partials.footer')
-
-    </div>
-    <!-- End of Content Wrapper -->
-
+  <!-- Right Panel -->
+  <div id="right-panel" class="right-panel">
+    <!-- Header-->
+    @include('admin.partials.navbar')
+    <!-- /#header -->
+    <!-- Content -->
+    @yield('content')
+    <!-- /.content -->
+    <div class="clearfix"></div>
+    <!-- Footer -->
+    @include('admin.partials.footer')
+    <!-- /.site-footer -->
   </div>
-  <!-- End of Page Wrapper -->
+  <!-- /#right-panel -->
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();">
-            Logout
-          </a>
-
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Script -->
+  <!-- Scripts -->
   @stack('before-script')
   @include('admin.partials.script')
   @stack('after-script')
-
 </body>
 
 </html>

@@ -1,60 +1,22 @@
-<!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
-
-  <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
-    <div class="sidebar-brand-icon rotate-n-15">
-      <i class="fas fa-vest"></i>
-    </div>
-    <div class="sidebar-brand-text mx-3">Siaga <span class="">Banjir</span></div>
-  </a>
-
-  <!-- Divider -->
-  <hr class="sidebar-divider my-0">
-
-  <!-- Nav Item - Dashboard -->
-  <li class="nav-item active">
-    <a class="nav-link" href="{{ route('admin.dashboard') }}">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Dashboard</span></a>
-  </li>
-
-  <!-- Divider -->
-  <hr class="sidebar-divider">
-
-  <!-- Heading -->
-  <div class="sidebar-heading">
-    Media Informasi
-  </div>
-
-
-  <li class="nav-item">
-    <a class="nav-link" href="#">
-      <i class="far fa-newspaper"></i>
-      <span>Konten</span></a>
-  </li>
-
-  <!-- Nav Item - Charts -->
-  <li class="nav-item">
-    <a class="nav-link" href="charts.html">
-      <i class="fas fa-fw fa-chart-area"></i>
-      <span>Grafik</span></a>
-  </li>
-
-  <!-- Nav Item - Tables -->
-  <li class="nav-item">
-    <a class="nav-link" href="tables.html">
-      <i class="fas fa-fw fa-table"></i>
-      <span>Tabel</span></a>
-  </li>
-
-  <!-- Divider -->
-  <hr class="sidebar-divider d-none d-md-block">
-
-  <!-- Sidebar Toggler (Sidebar) -->
-  <div class="d-none d-md-inline text-center">
-    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-  </div>
-
-</ul>
-<!-- End of Sidebar -->
+<aside id="left-panel" class="left-panel">
+  <nav class="navbar navbar-expand-sm navbar-default">
+    <div id="main-menu" class="main-menu collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="index.html"><i class="menu-icon fa fa-th-large"></i>Dashboard </a>
+        </li>
+        <li class="menu-title">Media Informasi</li><!-- /.menu-title -->
+        <li class="menu-item-has-children dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="menu-icon fa fa-folder"></i>Media
+          </a>
+          <ul class="sub-menu children dropdown-menu">
+            <li><i class="fa fa-location-arrow"></i><a href="#">Infografik</a></li>
+            <li><i class="fa fa-bullhorn"></i><a href="#">Berita</a></li>
+            <li><i class="fa fa-picture-o"></i><a href="#">Galeri</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</aside>

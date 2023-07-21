@@ -2,8 +2,6 @@
 
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\MQTTController as AdminMQTTController;
-use App\Http\Controllers\Map\CentrePointController;
-use App\Http\Controllers\Map\DataController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 

@@ -1,6 +1,15 @@
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
   color: #fff;
-  background: #1eadcb;
+  background: #e64d00;
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
+  color: #fff;
+  background: #fba200;
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link:hover {
+  color: #fb5c00;
 }
 
 .masthead {

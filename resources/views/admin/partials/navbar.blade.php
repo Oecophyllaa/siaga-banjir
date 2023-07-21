@@ -1,54 +1,32 @@
-<!-- Topbar -->
-<nav class="navbar navbar-expand navbar-light topbar static-top mb-4 bg-white shadow">
+<header id="header" class="header">
+  <div class="top-left">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo"></a>
+      <a class="navbar-brand hidden" href="#"><img src="images/logo2.png" alt="Logo"></a>
+      <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+    </div>
+  </div>
+  <div class="top-right">
+    <div class="header-menu">
 
-  <!-- Sidebar Toggle (Topbar) -->
-  <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-    <i class="fa fa-bars"></i>
-  </button>
-
-  <!-- Topbar Navbar -->
-  <ul class="navbar-nav ml-auto">
-
-    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-    <li class="nav-item dropdown no-arrow d-sm-none">
-      <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false">
-        <i class="fas fa-search fa-fw"></i>
-      </a>
-    </li>
-
-    <div class="topbar-divider d-none d-sm-block"></div>
-
-    <!-- Nav Item - User Information -->
-    <li class="nav-item dropdown no-arrow">
-      <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false">
-        <span class="d-none d-lg-inline small mr-2 text-gray-600">{{ Auth::user()->name }}</span>
-        <img class="img-profile rounded-circle" src="{{ asset('admin/img/undraw_profile.svg') }}">
-      </a>
-      <!-- Dropdown - User Information -->
-      <div class="dropdown-menu dropdown-menu-right animated--grow-in shadow" aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="#">
-          <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-          Profile
+      <div class="user-area dropdown float-right">
+        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
         </a>
-        <a class="dropdown-item" href="#">
-          <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-          Settings
-        </a>
-        <a class="dropdown-item" href="#">
-          <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-          Activity Log
-        </a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-          <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-          Logout
-        </a>
+
+        <!-- user-menu -->
+        <div class="user-menu dropdown-menu">
+          <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
+
+          <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <i class="fa fa-power-off"></i>Logout
+          </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
+        </div>
       </div>
-    </li>
 
-  </ul>
-
-</nav>
-<!-- End of Topbar -->
+    </div>
+  </div>
+</header>
