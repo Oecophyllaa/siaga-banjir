@@ -24,6 +24,4 @@ Auth::routes();
 
 Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
 	Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
-	Route::get('/mqtt/subs', [AdminMQTTController::class, 'subs'])->name('mqtt.subs');
-	Route::post('/mqtt/pubs', [AdminMQTTController::class, 'ping'])->name('mqtt.ping');
 });
