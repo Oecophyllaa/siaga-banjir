@@ -3,35 +3,38 @@
 @section('content')
   <!-- Hero -->
   <header class="masthead text-center text-white" id="home">
-    <div id="carouselExample" class="carousel slide">
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://source.unsplash.com/800x325?white" class="img-fluid w-100" alt="first-slider-img">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+          <img src="https://source.unsplash.com/800x325?flood" class="d-block w-100" alt="#">
+          <div class="carousel-caption d-none d-md-flex flex-column">
+            <h5 class="text-secondary-emphasis">25 Juni 2023</h5>
+            <h1 class="display-4">Pembuatan Website Siaga Banjir</h1>
+            <p>Mahasiswa Politeknik Negeri Jember melakukan pembuatan website Siaga Banjir di Kelurahan Tambakkemerakan</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://source.unsplash.com/800x326?white" class="d-block w-100" alt="second-slider-img">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+          <img src="https://source.unsplash.com/800x326?flood" class="d-block w-100" alt="#">
+          <div class="carousel-caption d-none d-md-flex flex-column">
+            <h5 class="text-secondary-emphasis">25 Juni 2023</h5>
+            <h1 class="display-4">Pembuatan Website Siaga Banjir</h1>
+            <p>Mahasiswa Politeknik Negeri Jember melakukan pembuatan website Siaga Banjir di Kelurahan Tambakkemerakan</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://source.unsplash.com/800x327?white" class="d-block w-100" alt="third-slider-img">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+          <img src="https://source.unsplash.com/800x327?flood" class="d-block w-100" alt="#">
+          <div class="carousel-caption d-none d-md-flex flex-column">
+            <h5 class="text-secondary-emphasis">25 Juni 2023</h5>
+            <h1 class="display-4">Pembuatan Website Siaga Banjir</h1>
+            <p>Mahasiswa Politeknik Negeri Jember melakukan pembuatan website Siaga Banjir di Kelurahan Tambakkemerakan</p>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -42,14 +45,14 @@
   <!-- Maps -->
   <section class="page-section" id="maps">
     <div class="container">
-      <h2 class="page-section-heading text-uppercase text-secondary mb-5 text-center">Maps</h2>
+      <h2 class="page-section-heading text-uppercase text-secondary mb-5 text-center">Peta</h2>
       <div class="row justify-content-center">
         <div id="map" style="height: 65vh"></div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Section-->
+  <!-- Media Informasi -->
   <section class="page-section portfolio" id="news">
     <div class="container">
       <!-- Portfolio Section Heading-->
@@ -68,7 +71,7 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="{{ asset('front/img/portfolio/cabin.png') }}" alt="news-img-1" />
+            <img class="img-fluid" src="https://source.unsplash.com/900x650?flood" alt="news-img-1" />
           </div>
         </div>
         <!-- Portfolio Item 2-->
@@ -77,7 +80,7 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="{{ asset('front/img/portfolio/cake.png') }}" alt="news-img-2" />
+            <img class="img-fluid" src="https://source.unsplash.com/900x651?flood" alt="news-img-2" />
           </div>
         </div>
         <!-- Portfolio Item 3-->
@@ -86,7 +89,7 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="{{ asset('front/img/portfolio/circus.png') }}" alt="news-img-3" />
+            <img class="img-fluid" src="https://source.unsplash.com/900x652?flood" alt="news-img-3" />
           </div>
         </div>
       </div>
@@ -114,13 +117,6 @@
           <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to
             the contact form to make it fully functional!</p>
         </div>
-      </div>
-      <!-- About Section Button-->
-      <div class="mt-4 text-center">
-        <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-          <i class="fas fa-download me-2"></i>
-          Free Download!
-        </a>
       </div>
     </div>
   </section>
@@ -201,9 +197,10 @@
   </section>
 @endsection
 
+<!-- modals - berita/infografik -->
 @push('before-script')
-  <!-- Portfolio Modals-->
-  <!-- Portfolio Modal 1-->
+  <!-- Infografik Modals-->
+  <!-- Infografik Modal 1-->
   <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
@@ -221,7 +218,7 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image-->
-                <img class="img-fluid mb-5 rounded" src="assets/img/portfolio/cabin.png" alt="..." />
+                <img class="img-fluid mb-5 rounded" src="https://source.unsplash.com/900x650?flood" alt="foto-infografik" />
                 <!-- Portfolio Modal - Text-->
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
                   recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
@@ -236,7 +233,7 @@
       </div>
     </div>
   </div>
-  <!-- Portfolio Modal 2-->
+  <!-- Infografik Modal 2-->
   <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
@@ -254,7 +251,7 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image-->
-                <img class="img-fluid mb-5 rounded" src="assets/img/portfolio/cake.png" alt="..." />
+                <img class="img-fluid mb-5 rounded" src="https://source.unsplash.com/900x651?flood" alt="foto-infografik" />
                 <!-- Portfolio Modal - Text-->
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
                   recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
@@ -269,7 +266,7 @@
       </div>
     </div>
   </div>
-  <!-- Portfolio Modal 3-->
+  <!-- Infografik Modal 3-->
   <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
@@ -287,106 +284,7 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image-->
-                <img class="img-fluid mb-5 rounded" src="assets/img/portfolio/circus.png" alt="..." />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
-                  recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 4-->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body pb-5 text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid mb-5 rounded" src="assets/img/portfolio/game.png" alt="..." />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
-                  recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 5-->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body pb-5 text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid mb-5 rounded" src="assets/img/portfolio/safe.png" alt="..." />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
-                  recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 6-->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body pb-5 text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid mb-5 rounded" src="assets/img/portfolio/submarine.png" alt="..." />
+                <img class="img-fluid mb-5 rounded" src="https://source.unsplash.com/900x652?flood" alt="foto-infografik" />
                 <!-- Portfolio Modal - Text-->
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
                   recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
@@ -465,7 +363,7 @@
     L.geoJSON(location1).addTo(map);
 
     const popups = "<b>Pos 15</b> <br />" +
-      "Ketinggian air: " + Math.floor(Math.random() * 155) + " cm <br />" +
+      "Luapan air: " + Math.floor(Math.random() * 155) + " cm <br />" +
       "Status: " + "siaga";
 
     const markerx = L.marker([-7.4005546571160705, 112.5789206127241]).addTo(map)

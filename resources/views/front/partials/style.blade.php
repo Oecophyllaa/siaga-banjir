@@ -7,6 +7,6 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="https://cdn.jsdelivr.net/npm/startbootstrap-freelancer@7.0.7/dist/css/styles.css" rel="stylesheet" />
-<!-- Leaflet -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" />
+<!-- Additional Libs -->
 <link rel="stylesheet" href="{{ asset('front/css/style.css') }}" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" />

@@ -6,9 +6,9 @@
       <div class="col-lg-4 mb-lg-0 mb-5">
         <h4 class="text-uppercase mb-4">Location</h4>
         <p class="lead mb-0">
-          2215 John Daniel Drive
-          <br />
-          Clark, MO 65243
+          Jl. Garuda No.1 Kelurahan Tambakkemerakan
+          Kecamatan Krian Kabupaten Sidoarjo Provinsi Jawa Timur
+          Kode Pos 61262
         </p>
       </div>
       <!-- Footer Social Icons-->

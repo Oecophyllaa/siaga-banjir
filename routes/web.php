@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
-use App\Http\Controllers\Admin\MQTTController as AdminMQTTController;
+use App\Http\Controllers\Admin\InfographicController as AdminInfographicController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +24,5 @@ Auth::routes();
 
 Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
 	Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+	Route::resource('infografik', AdminInfographicController::class);
 });

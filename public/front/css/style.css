@@ -1,15 +1,16 @@
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
   color: #fff;
-  background: #e64d00;
+  background: #1eadcb;
 }
 
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
   color: #fff;
-  background: #fba200;
+  background: #1eadcb;
 }
 
 #mainNav .navbar-nav>li.nav-item>a.nav-link:hover {
-  color: #fb5c00;
+  color: #fff;
+  background: #1eadcb;
 }
 
 .masthead {
@@ -37,4 +38,19 @@
 
 .carousel-caption {
   z-index: 2;
+  text-align: left;
+}
+
+.carousel-caption>h5 {
+  color: hsla(0, 0%, 100%, .8);
+}
+
+.carousel-caption>h1 {
+  letter-spacing: .01em;
+  text-transform: capitalize;
+}
+
+.carousel-caption>p {
+  line-height: 150%;
+  font-size: 22px;
 }
