@@ -43,6 +43,50 @@
   @stack('before-script')
   @include('admin.partials.script')
   @stack('after-script')
+
+  <!-- Sweetalert if error exist -->
+  @if (session()->has('error'))
+    <script>
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+
+      Toast.fire({
+        icon: 'error',
+        title: '{{ session('error') }}'
+      })
+    </script>
+  @endif
+
+  <!-- Sweetalert if success exist -->
+  @if (session()->has('success'))
+    <script>
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+
+      Toast.fire({
+        icon: 'success',
+        title: '{{ session('success') }}'
+      })
+    </script>
+  @endif
 </body>
 
 </html>

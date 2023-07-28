@@ -45,7 +45,7 @@ class InfographicController extends Controller
 		$data['image'] = $request->file('image')->store('assets/infografik', 'public');
 		// dd($data);
 		Infographic::create($data);
-		return redirect()->route('admin.infografik.index');
+		return redirect()->route('admin.infografik.index')->with('success', 'Infografik berhasil ditambahkan!');
 	}
 
 	/**
@@ -90,6 +90,9 @@ class InfographicController extends Controller
 	 */
 	public function destroy($id)
 	{
-		//
+		$infographic = Infographic::findOrFail($id);
+		$infographic->delete();
+
+		return redirect()->route('admin.infografik.index')->with('success', 'Infografik berhasil dihapus!');
 	}
 }

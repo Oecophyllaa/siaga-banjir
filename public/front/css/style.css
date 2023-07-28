@@ -1,3 +1,7 @@
+.bg-primary-- {
+  background-color: #1eadcb;
+}
+
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
   color: #fff;
   background: #1eadcb;

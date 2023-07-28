@@ -64,10 +64,11 @@
                           <a href="#" class="btn btn-warning btn-sm">
                             <i class="fa fa-pencil"></i>
                           </a>
-                          <form action="#" method="POST" class="d-inline">
+                          <form action="{{ route('admin.infografik.destroy', $item->id) }}" method="POST" class="d-inline"
+                            onsubmit="return confirm('Apakah anda yakin?');">
                             @method('delete')
                             @csrf
-                            <button class="btn btn-danger btn-sm">
+                            <button type="submit" class="btn btn-danger btn-sm">
                               <i class="fa fa-trash"></i>
                             </button>
                           </form>
