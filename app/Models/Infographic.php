@@ -11,8 +11,6 @@ class Infographic extends Model
 {
 	use HasFactory, SoftDeletes;
 
-	protected $table = 'infographics';
-
 	protected $fillable = [
 		'title',
 		'slug',

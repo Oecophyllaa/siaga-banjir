@@ -40,7 +40,7 @@
                   <h4 class="alert-heading">Ada Kesalahan!</h4>
                   <hr>
                   @foreach ($errors->all() as $error)
-                    <p>&bull; {{ $error }}</p>
+                    <p>&bull; {{ __($error) }}</p>
                   @endforeach
                 </div>
               @endif
@@ -50,7 +50,8 @@
                 @csrf
                 <div class="form-group">
                   <label for="nf-title" class="form-control-label">Judul</label>
-                  <input type="text" id="nf-title" name="title" placeholder="Judul Infografik . . ." class="form-control">
+                  <input type="text" id="nf-title" name="title" value="{{ old('title') }}" placeholder="Judul Infografik . . ."
+                    class="form-control">
                   <span class="help-block">Berikan judul infografik yang menarik</span>
                 </div>
                 <div class="form-group">

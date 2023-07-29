@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\InfographicStoreRequest;
+use App\Http\Requests\InfographicUpdateRequest;
 use App\Models\Infographic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Symfony\Component\Mailer\DelayedEnvelope;
 
 class InfographicController extends Controller
 {
@@ -17,9 +19,9 @@ class InfographicController extends Controller
 	 */
 	public function index()
 	{
-		$items = Infographic::all();
+		$infographics = Infographic::all();
 
-		return view('admin.infografik.index', compact('items'));
+		return view('admin.infografik.index', compact('infographics'));
 	}
 
 	/**
@@ -65,9 +67,9 @@ class InfographicController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function edit($id)
+	public function edit(Infographic $infografik)
 	{
-		//
+		return view('admin.infografik.edit', compact('infografik'));
 	}
 
 	/**
@@ -77,9 +79,19 @@ class InfographicController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, $id)
+	public function update(InfographicUpdateRequest $request, Infographic $infografik)
 	{
-		//
+		$data = $request->all();
+		$data['slug'] = Str::slug($data['title']) . '-' . Str::lower(Str::random(3));
+
+		// jika ada foto/gambar yg diupload
+		if ($request->hasFile('image')) {
+			$data['image'] = $request->file('image')->store('assets/infografik', 'public');
+		}
+
+		$infografik->update($data);
+
+		return redirect()->route('admin.infografik.index')->with('success', 'Infografik berhasil diupdate!');
 	}
 
 	/**
@@ -88,10 +100,9 @@ class InfographicController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy($id)
+	public function destroy(Infographic $infografik)
 	{
-		$infographic = Infographic::findOrFail($id);
-		$infographic->delete();
+		$infografik->delete();
 
 		return redirect()->route('admin.infografik.index')->with('success', 'Infografik berhasil dihapus!');
 	}

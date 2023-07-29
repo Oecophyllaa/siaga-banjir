@@ -52,22 +52,22 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @forelse ($items as $item)
+                    @forelse ($infographics as $infographic)
                       <tr>
-                        <td>{{ $item->id }}</td>
-                        <td>{{ $item->title }}</td>
+                        <td>{{ $infographic->id }}</td>
+                        <td>{{ $infographic->title }}</td>
                         <td>
-                          <img src="{{ $item->thumbnail }}" alt="foto" />
+                          <img src="{{ $infographic->thumbnail }}" alt="foto" />
                         </td>
-                        <td>{{ $item->created_at->format('d-m-Y') }}</td>
+                        <td>{{ $infographic->created_at->format('d-m-Y') }}</td>
                         <td>
-                          <a href="#" class="btn btn-warning btn-sm">
+                          <a href="{{ route('admin.infografik.edit', $infographic->id) }}" class="btn btn-warning btn-sm">
                             <i class="fa fa-pencil"></i>
                           </a>
-                          <form action="{{ route('admin.infografik.destroy', $item->id) }}" method="POST" class="d-inline"
+                          <form action="{{ route('admin.infografik.destroy', $infographic->id) }}" method="POST" class="d-inline"
                             onsubmit="return confirm('Apakah anda yakin?');">
-                            @method('delete')
                             @csrf
+                            @method('delete')
                             <button type="submit" class="btn btn-danger btn-sm">
                               <i class="fa fa-trash"></i>
                             </button>

@@ -3,9 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Auth;
 
-class InfographicStoreRequest extends FormRequest
+class InfographicUpdateRequest extends FormRequest
 {
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -26,7 +25,7 @@ class InfographicStoreRequest extends FormRequest
 	{
 		return [
 			'title' => 'required|string|max:255',
-			'image' => 'required|image|mimes:png,jpg,jpeg,webp|max:2048',
+			'image' => 'nullable|image|mimes:png,jpg,jpeg,webp|max:2048',
 		];
 	}
 }
