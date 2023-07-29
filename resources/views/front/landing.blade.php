@@ -52,46 +52,31 @@
     </div>
   </section>
 
-  <!-- Media Informasi -->
+  <!-- Infografik -->
   <section class="page-section portfolio" id="news">
     <div class="container">
-      <!-- Portfolio Section Heading-->
-      <h2 class="page-section-heading text-uppercase text-secondary mb-0 text-center">Berita</h2>
+      <!-- Infografik Section Heading-->
+      <h2 class="page-section-heading text-uppercase text-secondary mb-0 text-center">Infografik</h2>
       <!-- Icon Divider-->
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
         <div class="divider-custom-line"></div>
       </div>
-      <!-- Portfolio Grid Items-->
+      <!-- Infografik Grid Items-->
       <div class="row justify-content-center">
-        <!-- Portfolio Item 1-->
-        <div class="col-md-6 col-lg-4 mb-5">
-          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+        <!-- Infografik Item 1-->
+        @foreach ($infographics as $key => $infografik)
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#infografikModal" data-title="{{ $infografik->title }}"
+              data-img-url="{{ $infografik->thumbnail }}">
+              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+              </div>
+              <img class="img-fluid" src="{{ $infografik->thumbnail }}" alt="news-img-1" />
             </div>
-            <img class="img-fluid" src="https://source.unsplash.com/900x650?flood" alt="news-img-1" />
           </div>
-        </div>
-        <!-- Portfolio Item 2-->
-        <div class="col-md-6 col-lg-4 mb-5">
-          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="https://source.unsplash.com/900x651?flood" alt="news-img-2" />
-          </div>
-        </div>
-        <!-- Portfolio Item 3-->
-        <div class="col-md-6 col-lg-4 mb-5">
-          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="https://source.unsplash.com/900x652?flood" alt="news-img-3" />
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </section>
@@ -197,108 +182,55 @@
   </section>
 @endsection
 
-<!-- modals - berita/infografik -->
+<!-- modals - infografik -->
 @push('before-script')
   <!-- Infografik Modals-->
   <!-- Infografik Modal 1-->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body pb-5 text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
+  @foreach ($infographics as $infografik)
+    <div class="portfolio-modal modal fade" id="infografikModal" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+          <div class="modal-body pb-5 text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Infografik</h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img class="img-fluid mb-5 rounded infografik-img" src="#" alt="foto-infografik" />
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4 infografik-title"></p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
                 </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid mb-5 rounded" src="https://source.unsplash.com/900x650?flood" alt="foto-infografik" />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
-                  recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Infografik Modal 2-->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body pb-5 text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid mb-5 rounded" src="https://source.unsplash.com/900x651?flood" alt="foto-infografik" />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
-                  recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Infografik Modal 3-->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body pb-5 text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid mb-5 rounded" src="https://source.unsplash.com/900x652?flood" alt="foto-infografik" />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
-                  recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  @endforeach
+@endpush
+
+@push('after-script')
+  <script>
+    $('#infografikModal').on('show.bs.modal', function(e) {
+      var button = $(e.relatedTarget);
+      var modal = $(this);
+
+      modal.find('.infografik-img').attr('src', button.data('img-url'));
+      modal.find('.infografik-title').html(button.data('title'));
+    });
+  </script>
 @endpush
 
 <!-- Paho MQTT Connections -->
