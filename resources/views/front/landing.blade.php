@@ -56,7 +56,7 @@
   <section class="page-section portfolio" id="news">
     <div class="container">
       <!-- Infografik Section Heading-->
-      <h2 class="page-section-heading text-uppercase text-secondary mb-0 text-center">Infografik</h2>
+      <h2 class="page-section-heading text-uppercase text-secondary mb-0 text-center">Infografis</h2>
       <!-- Icon Divider-->
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
@@ -66,7 +66,7 @@
       <!-- Infografik Grid Items-->
       <div class="row justify-content-center">
         <!-- Infografik Item 1-->
-        @foreach ($infographics as $key => $infografik)
+        @forelse ($infographics as $key => $infografik)
           <div class="col-md-6 col-lg-4 mb-5">
             <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#infografikModal" data-title="{{ $infografik->title }}"
               data-img-url="{{ $infografik->thumbnail }}">
@@ -76,7 +76,11 @@
               <img class="img-fluid" src="{{ $infografik->thumbnail }}" alt="news-img-1" />
             </div>
           </div>
-        @endforeach
+        @empty
+          <div class="col-md-6 col-lg-4 mb-5">
+            <h1 class="display-4">Infografis tidak tersedia</h1>
+          </div>
+        @endforelse
       </div>
     </div>
   </section>
@@ -85,7 +89,7 @@
   <section class="page-section bg-primary mb-0 text-white" id="about">
     <div class="container">
       <!-- About Section Heading-->
-      <h2 class="page-section-heading text-uppercase text-center text-white">About</h2>
+      <h2 class="page-section-heading text-uppercase text-center text-white">Tentang</h2>
       <!-- Icon Divider-->
       <div class="divider-custom divider-light">
         <div class="divider-custom-line"></div>
@@ -93,7 +97,7 @@
         <div class="divider-custom-line"></div>
       </div>
       <!-- About Section Content-->
-      <div class="row">
+      <div class="row text-justify">
         <div class="col-lg-4 ms-auto">
           <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files
             including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
@@ -294,12 +298,22 @@
 
     L.geoJSON(location1).addTo(map);
 
-    const popups = "<b>Pos 15</b> <br />" +
-      "Luapan air: " + Math.floor(Math.random() * 155) + " cm <br />" +
-      "Status: " + "siaga";
+    const sensor1 = "<b>Pos 15</b> <br />" +
+      "Luapan air: " + Math.floor(Math.random() * 30) + " cm <br />" +
+      "Status: " + "Siaga <br />" +
+      "Sensor: Aktif";
 
-    const markerx = L.marker([-7.4005546571160705, 112.5789206127241]).addTo(map)
-      .bindPopup(popups)
+    const sensor2 = "<b>Pos 17</b> <br />" +
+      "Luapan air: " + Math.floor(Math.random() * 30) + " cm <br />" +
+      "Status: " + "Siaga <br />" +
+      "Sensor: Nonaktif";
+
+    const markerX = L.marker([-7.4005546571160705, 112.5789206127241]).addTo(map)
+      .bindPopup(sensor1)
+      .openPopup();
+
+    const markerY = L.marker([-7.402802054057466, 112.58622149464613]).addTo(map)
+      .bindPopup(sensor2)
       .openPopup();
   </script>
 @endpush

@@ -58,3 +58,7 @@
   line-height: 150%;
   font-size: 22px;
 }
+
+.text-justify {
+  text-align: justify;
+}
