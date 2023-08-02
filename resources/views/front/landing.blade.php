@@ -77,8 +77,8 @@
             </div>
           </div>
         @empty
-          <div class="col-md-6 col-lg-4 mb-5">
-            <h1 class="display-4">Infografis tidak tersedia</h1>
+          <div class="col-12 mb-5">
+            <h1 class="display-4 text-nowrap text-center">Infografis tidak tersedia</h1>
           </div>
         @endforelse
       </div>
