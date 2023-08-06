@@ -1,5 +1,13 @@
 @extends('layouts.front')
 
+@push('after-style')
+  <style>
+    .leaflet-popup-content {
+      width: 120px;
+    }
+  </style>
+@endpush
+
 @section('content')
   <!-- Hero -->
   <header class="masthead text-center text-white" id="home">
@@ -47,7 +55,22 @@
     <div class="container">
       <h2 class="page-section-heading text-uppercase text-secondary mb-5 text-center">Peta</h2>
       <div class="row justify-content-center">
-        <div id="map" style="height: 65vh"></div>
+        <div class="card p-0">
+          <div class="card-header text-end">
+            <span id="ct"></span>
+          </div>
+          <div class="card-body p-0">
+            <div id="map" style="height: 65vh"></div>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <h5>Catatan :</h5>
+            <ul>
+              <li>Normal : 0 - 10 cm</li>
+              <li>Waspada : 11 - 30 cm</li>
+              <li>Siaga : &GreaterEqual; 30 cm</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -234,6 +257,44 @@
       modal.find('.infografik-img').attr('src', button.data('img-url'));
       modal.find('.infografik-title').html(button.data('title'));
     });
+
+    function display_c() {
+      var refresh = 1000;
+      mytime = setTimeout('display_ct()', refresh);
+    }
+
+    function display_ct() {
+      var x = new Date();
+      // date part ///
+      var month = x.getMonth() + 1;
+      var day = x.getDate();
+      var year = x.getFullYear();
+      if (month < 10) {
+        month = '0' + month;
+      }
+      if (day < 10) {
+        day = '0' + day;
+      }
+      var x3 = day + '-' + month + '-' + year;
+
+      // time part //
+      var hour = x.getHours();
+      var minute = x.getMinutes();
+      var second = x.getSeconds();
+      if (hour < 10) {
+        hour = '0' + hour;
+      }
+      if (minute < 10) {
+        minute = '0' + minute;
+      }
+      if (second < 10) {
+        second = '0' + second;
+      }
+      var x3 = x3 + ' ' + hour + ':' + minute + ':' + second
+
+      document.getElementById('ct').innerHTML = x3;
+      display_c();
+    }
   </script>
 @endpush
 
@@ -279,8 +340,8 @@
       }
 
       if (message.destinationName == "mqtt/water-level") {
-        // document.getElementById("water-level").innerHTML = Math.round(message.payloadString);
-        console.log("onMessageArrived:" + Math.round(message.payloadString));
+        document.getElementById("water-level").innerHTML = Math.round(message.payloadString);
+        // console.log("onMessageArrived:" + Math.round(message.payloadString));
       }
     }
   </script>
@@ -299,7 +360,7 @@
     L.geoJSON(location1).addTo(map);
 
     const sensor1 = "<b>Pos 15</b> <br />" +
-      "Luapan air: " + Math.floor(Math.random() * 30) + " cm <br />" +
+      "Luapan air: " + "<x id='water-level'>0</x>" + " cm <br />" +
       "Status: " + "Siaga <br />" +
       "Sensor: Aktif";
 
@@ -313,7 +374,6 @@
       .openPopup();
 
     const markerY = L.marker([-7.402802054057466, 112.58622149464613]).addTo(map)
-      .bindPopup(sensor2)
-      .openPopup();
+      .bindPopup(sensor2);
   </script>
 @endpush

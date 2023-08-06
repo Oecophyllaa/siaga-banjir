@@ -14,7 +14,7 @@
   @stack('after-style')
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="display_ct()">
   @include('front.partials.navbar')
 
   @yield('content')

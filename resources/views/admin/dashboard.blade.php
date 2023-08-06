@@ -15,7 +15,7 @@
                 </div>
                 <div class="stat-content">
                   <div class="text-left dib">
-                    <div class="stat-text"><span class="count">12</span> CM</div>
+                    <div class="stat-text"><span class="count" id="water-level">0</span> CM</div>
                     <div class="stat-heading">Luapan Air</div>
                   </div>
                 </div>
