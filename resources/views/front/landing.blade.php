@@ -360,7 +360,7 @@
     L.geoJSON(location1).addTo(map);
 
     const sensor1 = "<b>Pos 15</b> <br />" +
-      "Luapan air: " + "<x id='water-level'>0</x>" + " cm <br />" +
+      "Luapan air: " + "<x id='water-level'> - </x>" + " cm <br />" +
       "Status: " + "Siaga <br />" +
       "Sensor: Aktif";
 
