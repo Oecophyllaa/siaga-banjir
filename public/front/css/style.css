@@ -2,6 +2,18 @@
   background-color: #1eadcb;
 }
 
+.bg-secondary-- {
+  background-color: #ccc;
+}
+
+.bg-dark-- {
+  background-color: #222;
+}
+
+.bg-light-- {
+  background-color: #f5f5f5;
+}
+
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
   color: #fff;
   background: #1eadcb;
@@ -61,4 +73,8 @@
 
 .text-justify {
   text-align: justify;
+}
+
+.nav-link {
+  color: white;
 }

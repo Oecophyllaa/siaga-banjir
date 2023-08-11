@@ -4,7 +4,7 @@
   <div class="content">
     <!-- Animated -->
     <div class="animated fadeIn">
-      <!-- Widgets  -->
+      <!-- Status  -->
       <div class="row">
         <div class="col-lg-3 col-md-6">
           <div class="card">
@@ -41,15 +41,16 @@
             </div>
           </div>
         </div>
-
       </div>
-      <!-- /Widgets -->
-      <!--  Traffic  -->
+      <!-- /Status -->
+
+      <!--  Grafik-Statistik  -->
       <div class="row">
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
               <h4 class="box-title">Grafik Tren & Statistik Pengunjung</h4>
+              <hr />
             </div>
             <div class="row">
               <div class="col-lg-8">
@@ -92,7 +93,32 @@
           </div>
         </div><!-- /# column -->
       </div>
-      <!--  /Traffic -->
+      <!--  /Grafik-Statistik -->
+
+      <!-- Peta -->
+      <div class="row">
+        <div class="col-12 col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <strong class="card-title mb-3">Peta</strong>
+              <span class="float-right" id="ct"></span>
+            </div>
+            <div class="card-body">
+              <div id="map" style="height: 65vh"></div>
+              <hr>
+              <div class="card-text text-sm-start vue-lists">
+                <h5>Catatan :</h5>
+                <ul>
+                  <li>Normal : 0 - 10 cm</li>
+                  <li>Waspada : 11 - 30 cm</li>
+                  <li>Siaga : &GreaterEqual; 30 cm</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Peta -->
       <div class="clearfix"></div>
     </div>
     <!-- .animated -->
@@ -102,6 +128,57 @@
 <!-- flotchart.js -->
 @push('after-script')
   <script src="{{ asset('admin/assets/js/lib/flot-chart/flot-chart-init.js') }}"></script>
+@endpush
+
+<!-- Timestamps Peta -->
+@push('after-script')
+  <script>
+    $('#infografikModal').on('show.bs.modal', function(e) {
+      var button = $(e.relatedTarget);
+      var modal = $(this);
+
+      modal.find('.infografik-img').attr('src', button.data('img-url'));
+      modal.find('.infografik-title').html(button.data('title'));
+    });
+
+    function display_c() {
+      var refresh = 1000;
+      mytime = setTimeout('display_ct()', refresh);
+    }
+
+    function display_ct() {
+      var x = new Date();
+      // date part ///
+      var month = x.getMonth() + 1;
+      var day = x.getDate();
+      var year = x.getFullYear();
+      if (month < 10) {
+        month = '0' + month;
+      }
+      if (day < 10) {
+        day = '0' + day;
+      }
+      var x3 = day + '-' + month + '-' + year;
+
+      // time part //
+      var hour = x.getHours();
+      var minute = x.getMinutes();
+      var second = x.getSeconds();
+      if (hour < 10) {
+        hour = '0' + hour;
+      }
+      if (minute < 10) {
+        minute = '0' + minute;
+      }
+      if (second < 10) {
+        second = '0' + second;
+      }
+      var x3 = x3 + ' ' + hour + ':' + minute + ':' + second
+
+      document.getElementById('ct').innerHTML = x3;
+      display_c();
+    }
+  </script>
 @endpush
 
 <!-- MQTT -->
@@ -150,5 +227,36 @@
         // console.log("onMessageArrived:" + message.payloadString);
       }
     }
+  </script>
+@endpush
+
+<!-- Leaflet Configs -->
+@push('after-script')
+  <script src="{{ asset('front/locations/data.js') }}"></script>
+  <script>
+    let map = L.map('map').setView([-7.400538, 112.578910], 17);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 20,
+    }).addTo(map);
+
+    L.geoJSON(location1).addTo(map);
+
+    const sensor1 = "<b>Pos 15</b> <br />" +
+      "Luapan air: " + "<x id='water-level'>0</x>" + " cm <br />" +
+      "Status: " + "Siaga <br />" +
+      "Sensor: Aktif";
+
+    const sensor2 = "<b>Pos 17</b> <br />" +
+      "Luapan air: " + Math.floor(Math.random() * 30) + " cm <br />" +
+      "Status: " + "Siaga <br />" +
+      "Sensor: Nonaktif";
+
+    const markerX = L.marker([-7.4005546571160705, 112.5789206127241]).addTo(map)
+      .bindPopup(sensor1)
+      .openPopup();
+
+    const markerY = L.marker([-7.402802054057466, 112.58622149464613]).addTo(map)
+      .bindPopup(sensor2);
   </script>
 @endpush

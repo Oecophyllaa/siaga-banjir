@@ -2,31 +2,34 @@
 <footer class="footer text-center">
   <div class="container">
     <div class="row">
-      <!-- Footer Location-->
-      <div class="col-lg-4 mb-lg-0 mb-5">
-        <h4 class="text-uppercase mb-4">Location</h4>
+      <!-- Footer - Alamat -->
+      <div class="col-12 col-lg-3 mb-lg-0 mb-5">
+        <h4 class="text-uppercase mb-4">Alamat</h4>
         <p class="lead mb-0">
           Jl. Garuda No.1 Kelurahan Tambakkemerakan
           Kecamatan Krian Kabupaten Sidoarjo Provinsi Jawa Timur
           Kode Pos 61262
         </p>
       </div>
-      <!-- Footer Social Icons-->
-      <div class="col-lg-4 mb-lg-0 mb-5">
-        <h4 class="text-uppercase mb-4">Around the Web</h4>
-        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+
+      <!-- Peta Situs -->
+      <div class="col-12 col-lg-3 mb-lg-0 mb-5">
+        <h4 class="text-uppercase mb-4">Peta Situs</h4>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="#home">Beranda</a>
+          <a class="nav-link" href="#maps">Peta</a>
+          <a class="nav-link" href="#infografis">Infografis</a>
+          <a class="nav-link" href="#tentang">Tentang</a>
+          <a class="nav-link" href="#kontak">Kontak</a>
+        </nav>
       </div>
-      <!-- Footer About Text-->
-      <div class="col-lg-4">
-        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-        <p class="lead mb-0">
-          Freelance is a free to use, MIT licensed Bootstrap theme created by
-          <a href="http://startbootstrap.com">Start Bootstrap</a>
-          .
-        </p>
+
+      <!-- Laman Terkait -->
+      <div class="col-12 col-lg-3">
+        <h4 class="text-uppercase mb-4">Laman Terkait</h4>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="http://keltambakkemerakan.sidoarjokab.go.id/index.php/">Website resmi Kelurahan Tambakkemerakan</a>
+        </nav>
       </div>
     </div>
   </div>

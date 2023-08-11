@@ -13,9 +13,9 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-2" href="#home">Beranda</a></li>
         <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-2" href="#maps">Peta</a></li>
-        <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-2" href="#news">Berita</a></li>
-        <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-2" href="#about">About</a></li>
-        <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-2" href="#contact">Contact</a></li>
+        <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-2" href="#infografis">Infografis</a></li>
+        <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-2" href="#tentang">Tentang</a></li>
+        <li class="nav-item mx-lg-1 mx-0"><a class="nav-link px-lg-3 rounded py-3 px-2" href="#kontak">Kontak</a></li>
       </ul>
     </div>
   </div>

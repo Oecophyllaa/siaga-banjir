@@ -75,15 +75,15 @@
     </div>
   </section>
 
-  <!-- Infografik -->
-  <section class="page-section portfolio" id="news">
+  <!-- Infografis -->
+  <section class="page-section portfolio" id="infografis">
     <div class="container">
       <!-- Infografik Section Heading-->
       <h2 class="page-section-heading text-uppercase text-secondary mb-0 text-center">Infografis</h2>
       <!-- Icon Divider-->
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
         <div class="divider-custom-line"></div>
       </div>
       <!-- Infografik Grid Items-->
@@ -108,18 +108,18 @@
     </div>
   </section>
 
-  <!-- About Section-->
-  <section class="page-section bg-primary mb-0 text-white" id="about">
+  <!-- Tentang -->
+  <section class="page-section bg-light-- mb-0" id="tentang">
     <div class="container">
-      <!-- About Section Heading-->
-      <h2 class="page-section-heading text-uppercase text-center text-white">Tentang</h2>
-      <!-- Icon Divider-->
-      <div class="divider-custom divider-light">
+      <!-- Heading -->
+      <h2 class="page-section-heading text-uppercase text-center">Tentang</h2>
+      <!-- Divider -->
+      <div class="divider-custom">
         <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
         <div class="divider-custom-line"></div>
       </div>
-      <!-- About Section Content-->
+      <!-- Content -->
       <div class="row text-justify">
         <div class="col-lg-4 ms-auto">
           <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files
@@ -133,18 +133,18 @@
     </div>
   </section>
 
-  <!-- Contact Section-->
-  <section class="page-section" id="contact">
+  <!-- Kontak -->
+  <section class="page-section" id="kontak">
     <div class="container">
-      <!-- Contact Section Heading-->
-      <h2 class="page-section-heading text-uppercase text-secondary mb-0 text-center">Contact Me</h2>
-      <!-- Icon Divider-->
+      <!-- Heading -->
+      <h2 class="page-section-heading text-uppercase text-secondary mb-0 text-center">Kontak</h2>
+      <!-- Divider -->
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
         <div class="divider-custom-line"></div>
       </div>
-      <!-- Contact Section Form-->
+      <!-- Form -->
       <div class="row justify-content-center">
         <div class="col-lg-8 col-xl-7">
           <!-- * * * * * * * * * * * * * * *-->
@@ -248,6 +248,7 @@
   @endforeach
 @endpush
 
+<!-- Timestamps Peta -->
 @push('after-script')
   <script>
     $('#infografikModal').on('show.bs.modal', function(e) {

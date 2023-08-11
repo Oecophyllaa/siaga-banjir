@@ -19,7 +19,7 @@
   @stack('after-style')
 </head>
 
-<body>
+<body onload="display_ct()">
   <!-- Left Panel -->
   @include('admin.partials.sidebar')
   <!-- /#left-panel -->
