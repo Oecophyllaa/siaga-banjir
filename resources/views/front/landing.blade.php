@@ -14,28 +14,13 @@
     <div id="carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://source.unsplash.com/800x325?flood" class="d-block w-100" alt="#">
-          <div class="carousel-caption d-none d-md-flex flex-column">
-            <h5 class="text-secondary-emphasis">25 Juni 2023</h5>
-            <h1 class="display-4">Pembuatan Website Siaga Banjir</h1>
-            <p>Mahasiswa Politeknik Negeri Jember melakukan pembuatan website Siaga Banjir di Kelurahan Tambakkemerakan</p>
-          </div>
+          <img src="{{ asset('front/img/carousel-1.jpg') }}" class="d-block w-100" alt="#">
         </div>
         <div class="carousel-item">
-          <img src="https://source.unsplash.com/800x326?flood" class="d-block w-100" alt="#">
-          <div class="carousel-caption d-none d-md-flex flex-column">
-            <h5 class="text-secondary-emphasis">25 Juni 2023</h5>
-            <h1 class="display-4">Pembuatan Website Siaga Banjir</h1>
-            <p>Mahasiswa Politeknik Negeri Jember melakukan pembuatan website Siaga Banjir di Kelurahan Tambakkemerakan</p>
-          </div>
+          <img src="{{ asset('front/img/carousel-2.jpg') }}" class="d-block w-100" alt="#">
         </div>
         <div class="carousel-item">
-          <img src="https://source.unsplash.com/800x327?flood" class="d-block w-100" alt="#">
-          <div class="carousel-caption d-none d-md-flex flex-column">
-            <h5 class="text-secondary-emphasis">25 Juni 2023</h5>
-            <h1 class="display-4">Pembuatan Website Siaga Banjir</h1>
-            <p>Mahasiswa Politeknik Negeri Jember melakukan pembuatan website Siaga Banjir di Kelurahan Tambakkemerakan</p>
-          </div>
+          <img src="{{ asset('front/img/carousel-3.jpg') }}" class="d-block w-100" alt="#">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -122,12 +107,25 @@
       <!-- Content -->
       <div class="row text-justify">
         <div class="col-lg-4 ms-auto">
-          <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files
-            including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+          <p class="lead">
+            Selamat datang di Siaga Banjir! <br><br>
+
+            Kami adalah sumber informasi terkini seputar situasi banjir di berbagai daerah. Tujuan kami adalah memberikan akses cepat dan akurat
+            terhadap informasi terkait banjir, termasuk peringatan dini, pemantauan kondisi cuaca, dan saran-saran untuk menghadapi banjir. <br><br>
+
+            Terima kasih atas kunjungan Anda!
+          </p>
         </div>
         <div class="col-lg-4 me-auto">
-          <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to
-            the contact form to make it fully functional!</p>
+          <p class="lead">
+            <b>Tim Siaga Banjir</b>
+          <ul>
+            <li>Rangga Raditya Nugroho</li>
+            <li>Junia Vitasari</li>
+            <li>Erlangga Lesmana Putra</li>
+            <li>Johan Krisbima Abi</li>
+          </ul>
+          </p>
         </div>
       </div>
     </div>
