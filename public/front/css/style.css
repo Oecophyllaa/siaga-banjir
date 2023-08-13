@@ -78,3 +78,7 @@
 .nav-link {
   color: white;
 }
+
+.portfolio .portfolio-item .portfolio-item-caption {
+  background-color: rgba(30, 173, 203, .9);
+}
