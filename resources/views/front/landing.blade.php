@@ -14,7 +14,7 @@
     <div id="carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://source.unsplash.com/800x325?flood" class="d-block w-100" alt="#">
+          <img src="{{ asset('front/img/carousel-1.jpg') }}" class="d-block w-100" alt="#">
           <div class="carousel-caption d-none d-md-flex flex-column">
             <h5 class="text-secondary-emphasis">25 Juni 2023</h5>
             <h1 class="display-4">Pembuatan Website Siaga Banjir</h1>
@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://source.unsplash.com/800x326?flood" class="d-block w-100" alt="#">
+          <img src="{{ asset('front/img/carousel-2.jpg') }}" class="d-block w-100" alt="#">
           <div class="carousel-caption d-none d-md-flex flex-column">
             <h5 class="text-secondary-emphasis">25 Juni 2023</h5>
             <h1 class="display-4">Pembuatan Website Siaga Banjir</h1>
@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://source.unsplash.com/800x327?flood" class="d-block w-100" alt="#">
+          <img src="{{ asset('front/img/carousel-3.jpg') }}" class="d-block w-100" alt="#">
           <div class="carousel-caption d-none d-md-flex flex-column">
             <h5 class="text-secondary-emphasis">25 Juni 2023</h5>
             <h1 class="display-4">Pembuatan Website Siaga Banjir</h1>
