@@ -12,8 +12,8 @@
           </a>
           <ul class="sub-menu children dropdown-menu">
             <li><i class="fa fa-location-arrow"></i><a href="{{ route('admin.infografik.index') }}">Infografik</a></li>
-            <li><i class="fa fa-bullhorn"></i><a href="#">Berita</a></li>
-            <li><i class="fa fa-picture-o"></i><a href="#">Galeri</a></li>
+            {{-- <li><i class="fa fa-bullhorn"></i><a href="#">Berita</a></li>
+            <li><i class="fa fa-picture-o"></i><a href="#">Galeri</a></li> --}}
           </ul>
         </li>
       </ul>

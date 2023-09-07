@@ -33,7 +33,7 @@
                 </div>
                 <div class="stat-content">
                   <div class="text-left dib">
-                    <div class="stat-text">Siaga</div>
+                    <div class="stat-text"><span id="water-level-status">Normal</span></div>
                     <div class="stat-heading">Status</div>
                   </div>
                 </div>
